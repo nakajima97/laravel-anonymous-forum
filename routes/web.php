@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ThreadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,7 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/thread/create', function () {
-    return view('thread.create');
-});
+Route::get('/thread/create', [ThreadController::class, 'create']);
 Route::get('/thread/show/{id}', function () {
     return view('thread.show');
 });
