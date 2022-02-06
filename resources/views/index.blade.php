@@ -13,7 +13,7 @@
             </div>
         </div>
 
-        <div>
+        <div class="my-5">
             <form action="get" class="flex justify-center">
                 <input type="text"
                     class="grow shadow appearance-none border border-red-500 rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
@@ -23,7 +23,8 @@
         </div>
 
         <div>
-            掲示板一覧
+            <x-forum-list-item link="http://localhost" text="テスト" />
+            <x-forum-list-item link="http://localhost" text="テスト" />
         </div>
     </div>
 </x-default-layout>
