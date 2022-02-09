@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Forum;
 use Illuminate\Http\Request;
 
 class ThreadController extends Controller
@@ -11,7 +12,14 @@ class ThreadController extends Controller
         return view('thread.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $title = $request->input('title');
+
+        $forum = new Forum();
+        $forum->title = $title;
+        $forum->save();
+
+        return view('index');
     }
 }
