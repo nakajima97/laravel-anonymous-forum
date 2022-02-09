@@ -22,6 +22,7 @@ Route::get('/thread/create', [ThreadController::class, 'create']);
 Route::get('/thread/show/{id}', function () {
     return view('thread.show');
 });
+Route::post('/thread', [ThreadController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -10,4 +10,8 @@ class ThreadController extends Controller
     {
         return view('thread.create');
     }
+
+    public function store()
+    {
+    }
 }
