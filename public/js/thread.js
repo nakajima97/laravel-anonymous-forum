@@ -7,6 +7,5 @@ var btnCreateThread = document.getElementById("btnCreateThread");
 btnCreateThread.addEventListener("click", function () {
   location = "/thread/create";
 });
-console.log("aaa");
 /******/ })()
 ;
