@@ -26,7 +26,7 @@
                 {{ $header }}
             </div>
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <button
+                <button id="btnCreateThread"
                     class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">スレッドを立てる</button>
             </div>
         </header>

@@ -28,3 +28,5 @@
         </div>
     </div>
 </x-default-layout>
+
+<script src="{{ mix('js/thread.js') }}"></script>
