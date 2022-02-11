@@ -13,13 +13,13 @@ class CreateTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('forum_tags', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('forum_id');
+            $table->unsignedBigInteger('thread_id');
             $table->string('name', 40);
             $table->timestamps();
 
-            $table->foreign('forum_id')->references('id')->on('forums');
+            $table->foreign('thread_id')->references('id')->on('forums');
         });
     }
 

@@ -15,14 +15,14 @@ class CreateCommentsTable extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('forum_id');
+            $table->unsignedBigInteger('thread_id');
             $table->integer('comment_number');
             $table->string('comment');
             $table->string('handle_name');
             $table->integer('reply_to')->nullable();
             $table->timestamps();
 
-            $table->foreign('forum_id')->references('id')->on('forums');
+            $table->foreign('thread_id')->references('id')->on('forums');
         });
     }
 

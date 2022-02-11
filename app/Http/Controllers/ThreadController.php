@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Forum;
+use App\Models\Thread;
 use Illuminate\Http\Request;
 
 class ThreadController extends Controller
@@ -16,7 +16,7 @@ class ThreadController extends Controller
     {
         $title = $request->input('title');
 
-        $forum = new Forum();
+        $forum = new Thread();
         $forum->title = $title;
         $forum->save();
 
