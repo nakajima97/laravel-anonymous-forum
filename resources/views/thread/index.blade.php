@@ -23,8 +23,11 @@
         </div>
 
         <div>
-            <x-forum-list-item link="http://localhost" text="テスト" />
-            <x-forum-list-item link="http://localhost" text="テスト" />
+            @if (isset($threads))
+                @foreach ($threads as $thread)
+                    <x-forum-list-item link="http://localhost" text="{{ $thread->title }}"></x-forum-list-item>
+                @endforeach
+            @endif
         </div>
     </div>
 </x-default-layout>
