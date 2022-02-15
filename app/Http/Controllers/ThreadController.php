@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class ThreadController extends Controller
 {
+    public function index(Request $request)
+    {
+        $threads = Thread::all();
+
+        return view('thread.index', ['threads' => $threads, 'aaa' => 'あああ']);
+    }
+
     public function create()
     {
         return view('thread.create');
@@ -20,6 +27,6 @@ class ThreadController extends Controller
         $forum->title = $title;
         $forum->save();
 
-        return view('index');
+        return view('thread.index');
     }
 }
