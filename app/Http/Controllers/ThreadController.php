@@ -14,6 +14,11 @@ class ThreadController extends Controller
         return view('thread.index', ['threads' => $threads]);
     }
 
+    public function show(Request $request, $id)
+    {
+        return view('thread.show');
+    }
+
     public function create()
     {
         return view('thread.create');
