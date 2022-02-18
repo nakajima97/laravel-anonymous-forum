@@ -25,7 +25,9 @@
         <div>
             @if (isset($threads))
                 @foreach ($threads as $thread)
-                    <x-forum-list-item link="http://localhost" text="{{ $thread->title }}"></x-forum-list-item>
+                    <x-forum-list-item link="http://localhost/thread/show/{{ $thread->id }}"
+                        text="{{ $thread->title }}">
+                    </x-forum-list-item>
                 @endforeach
             @endif
         </div>

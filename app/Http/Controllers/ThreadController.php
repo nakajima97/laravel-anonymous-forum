@@ -11,7 +11,14 @@ class ThreadController extends Controller
     {
         $threads = Thread::all();
 
-        return view('thread.index', ['threads' => $threads, 'aaa' => 'あああ']);
+        return view('thread.index', ['threads' => $threads]);
+    }
+
+    public function show(Request $request, $id)
+    {
+        $thread = Thread::find($id);
+
+        return view('thread.show', ['thread' => $thread]);
     }
 
     public function create()
