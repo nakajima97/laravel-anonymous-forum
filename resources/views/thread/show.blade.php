@@ -5,10 +5,10 @@
 
     <div class="2xl:mx-auto 2xl:container w-full md:mx-24 md:px-12 px-4 my-4">
         <div class="my-5">
-            タイトル
+            {{ $thread->title }}
         </div>
         <div>
-            本文
+            スレッドの内容
         </div>
     </div>
 </x-default-layout>
