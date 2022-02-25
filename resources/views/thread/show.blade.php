@@ -13,9 +13,14 @@
             @endforeach
         </div>
         <div class="flex gap-1">
-            <input type="text"
-                class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline flex-1">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">投稿</button>
+            <form action="/comment" method="POST">
+                @csrf
+                <input type="hidden" value="{{ request()->id }}" name="thread_id">
+                <input type="text" name="comment"
+                    class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline flex-1">
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">投稿</button>
+            </form>
         </div>
     </div>
 </x-default-layout>
