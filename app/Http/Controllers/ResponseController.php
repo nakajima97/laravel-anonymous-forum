@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Comment;
+use App\Models\Response;
 use Illuminate\Http\Request;
 
 class ResponseController extends Controller
 {
     public function store(Request $request)
     {
-        $comment_of_request = $request->input('comment');
+        $content = $request->input('content');
 
-        $comment = new Comment();
-        $comment->comment = $comment_of_request;
-        $comment->thread_id = $request->input('thread_id');
-        $comment->comment_number = 1;
-        $comment->handle_name = "";
-        $comment->save();
+        $response = new Response();
+        $response->content = $content;
+        $response->thread_id = $request->input('thread_id');
+        $response->response_number = 1;
+        $response->handle_name = "";
+        $response->save();
 
         return redirect("/thread/show/1");
     }

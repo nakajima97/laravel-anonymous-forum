@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Response;
 
 class Thread extends Model
 {
@@ -12,8 +13,8 @@ class Thread extends Model
     /**
      * コメントを返す関数
      */
-    public function comments()
+    public function responses()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(Response::class);
     }
 }
