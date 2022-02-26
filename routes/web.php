@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ThreadController;
+use App\Http\Controllers\ResponseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,9 @@ Route::get('/', [ThreadController::class, 'index']);
 Route::get('/thread/create', [ThreadController::class, 'create']);
 Route::get('/thread/show/{id}', [ThreadController::class, 'show']);
 Route::post('/thread', [ThreadController::class, 'store']);
+
+Route::post('/comment', [ResponseController::class, 'store'])
+    ->name('comment.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
