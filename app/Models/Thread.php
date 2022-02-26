@@ -17,4 +17,11 @@ class Thread extends Model
     {
         return $this->hasMany(Response::class);
     }
+
+    public function get_last_response_number()
+    {
+        $response = $this->hasMany(Response::class)->orderByDesc('response_number')->first();
+
+        return $response['response_number'];
+    }
 }
