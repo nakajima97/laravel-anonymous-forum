@@ -10,7 +10,8 @@
         <div class="my-2">
             @if (isset($responses))
                 @foreach ($responses as $response)
-                    {{ $response->content }}
+                    <x-response :number="$response->response_number" :content="$response->content">
+                    </x-response>
                 @endforeach
             @else
                 <p>レスが一つもついていないよ</p>
