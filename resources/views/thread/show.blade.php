@@ -7,7 +7,7 @@
         <div class="my-5 text-4xl text-center">
             {{ $thread->title }}
         </div>
-        <div my-2>
+        <div class="my-2">
             @if (isset($responses))
                 @foreach ($responses as $response)
                     {{ $response->content }}
