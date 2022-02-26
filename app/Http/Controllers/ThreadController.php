@@ -17,7 +17,13 @@ class ThreadController extends Controller
     public function show(Request $request, $id)
     {
         $thread = Thread::find($id);
-        $comments = $thread->comments();
+        $comments = $thread->comments;
+
+        // $return_comments = [];
+
+        // foreach ($comments as $comment) {
+        //     array_push($return_comments, $comment->comment);
+        // }
 
         return view('thread.show', ['thread' => $thread, 'comments' => $comments]);
     }

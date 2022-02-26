@@ -29,6 +29,8 @@
                         text="{{ $thread->title }}">
                     </x-forum-list-item>
                 @endforeach
+            @else
+                <p>スレッドが１件も無いよ</p>
             @endif
         </div>
     </div>
