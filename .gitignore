@@ -15,3 +15,6 @@ yarn-error.log
 /.vscode
 
 .php-cs-fixer.cache
+
+public/css/app.css
+public/js/
