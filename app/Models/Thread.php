@@ -22,6 +22,6 @@ class Thread extends Model
     {
         $response = $this->hasMany(Response::class)->orderByDesc('response_number')->first();
 
-        return $response['response_number'];
+        return $response['response_number'] ?? 1;
     }
 }
