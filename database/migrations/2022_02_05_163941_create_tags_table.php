@@ -19,7 +19,7 @@ class CreateTagsTable extends Migration
             $table->string('name', 40);
             $table->timestamps();
 
-            $table->foreign('thread_id')->references('id')->on('forums');
+            $table->foreign('thread_id')->references('id')->on('threads');
         });
     }
 
