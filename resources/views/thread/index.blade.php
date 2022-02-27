@@ -14,16 +14,18 @@
         </div>
 
         <div class="my-5">
-            <form action="get" class="flex justify-center">
+            <div class="flex justify-center">
+                {{-- <form action="get" class="flex justify-center"> --}}
                 <input type="text"
                     class="grow shadow appearance-none border border-red-500 rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                 <input type="submit" value="検索"
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-            </form>
+                {{-- </form> --}}
+            </div>
         </div>
 
         <div>
-            @if (isset($threads))
+            @if (isset($threads) && !$threads->isEmpty())
                 @foreach ($threads as $thread)
                     <x-forum-list-item link="http://localhost/thread/show/{{ $thread->id }}"
                         text="{{ $thread->title }}">

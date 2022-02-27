@@ -14,7 +14,9 @@ class ResponseController extends Controller
 
         $response = new Response();
 
-        $thread = Thread::find($request->thread_id);
+        $thread_id = $request->thread_id;
+
+        $thread = Thread::find($thread_id);
         $last_response_number = $thread->get_last_response_number();
 
         $response->content = $content;
@@ -23,6 +25,6 @@ class ResponseController extends Controller
         $response->handle_name = "";
         $response->save();
 
-        return redirect("/thread/show/1");
+        return redirect("/thread/show/$thread_id");
     }
 }
