@@ -14,8 +14,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::redirect('/', '/thread');
 
-Route::get('/', [ThreadController::class, 'index']);
+Route::get('/thread', [ThreadController::class, 'index']);
 
 Route::get('/thread/create', [ThreadController::class, 'create']);
 Route::get('/thread/show/{id}', [ThreadController::class, 'show']);

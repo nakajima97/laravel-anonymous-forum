@@ -35,6 +35,6 @@ class ThreadController extends Controller
         $forum->title = $title;
         $forum->save();
 
-        return view('thread.index');
+        return redirect('/');
     }
 }

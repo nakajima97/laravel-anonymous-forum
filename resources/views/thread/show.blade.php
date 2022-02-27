@@ -8,7 +8,7 @@
             {{ $thread->title }}
         </div>
         <div class="my-2">
-            @if (isset($responses))
+            @if (!empty($responses))
                 @foreach ($responses as $response)
                     <x-response :number="$response->response_number" :content="$response->content">
                     </x-response>

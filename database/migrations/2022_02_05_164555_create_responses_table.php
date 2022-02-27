@@ -22,7 +22,7 @@ class CreateResponsesTable extends Migration
             $table->integer('reply_to')->nullable();
             $table->timestamps();
 
-            $table->foreign('thread_id')->references('id')->on('forums');
+            $table->foreign('thread_id')->references('id')->on('threads');
         });
     }
 
