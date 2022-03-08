@@ -23,7 +23,7 @@
         <!-- Page Heading -->
         <header class="bg-white shadow flex">
             <div class="flex-grow max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                {{ $header }}
+                <a href="{{ route('home') }}">{{ $header }}</a>
             </div>
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <button id="btnCreateThread"
