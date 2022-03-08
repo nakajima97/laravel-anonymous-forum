@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::redirect('/', '/thread');
 
-Route::get('/thread', [ThreadController::class, 'index']);
+Route::get('/thread', [ThreadController::class, 'index'])->name('home');
 
 Route::get('/thread/create', [ThreadController::class, 'create']);
 Route::get('/thread/show/{id}', [ThreadController::class, 'show']);
