@@ -31,10 +31,12 @@ class ThreadController extends Controller
     {
         $title = $request->input('title');
 
-        $forum = new Thread();
-        $forum->title = $title;
-        $forum->save();
+        $thread = new Thread();
+        $thread->title = $title;
+        $thread->save();
 
-        return redirect('/');
+        $id = $thread->id;
+
+        return redirect("/thread/show/${id}");
     }
 }
