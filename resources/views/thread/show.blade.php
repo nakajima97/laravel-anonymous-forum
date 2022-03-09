@@ -26,8 +26,8 @@
                     class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline flex-1">
             </div>
             <div class="flex gap-1">
-                <input type="text" name="content"
-                    class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline flex-1">
+                <textarea name="content" id="" cols="30" rows="2"
+                    class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline flex-1"></textarea>
                 <button type="submit"
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">投稿</button>
             </div>
