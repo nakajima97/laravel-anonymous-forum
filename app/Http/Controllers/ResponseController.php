@@ -11,6 +11,7 @@ class ResponseController extends Controller
     public function store(Request $request)
     {
         $content = $request->input('content');
+        $handle_name = $request->input('handle_name');
 
         $response = new Response();
 
@@ -22,7 +23,7 @@ class ResponseController extends Controller
         $response->content = $content;
         $response->thread_id = intval($request->input('thread_id'));
         $response->response_number = $last_response_number + 1;
-        $response->handle_name = "";
+        $response->handle_name = $handle_name;
         $response->save();
 
         return redirect("/thread/show/$thread_id");
