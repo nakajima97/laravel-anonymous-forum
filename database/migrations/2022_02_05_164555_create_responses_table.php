@@ -18,7 +18,7 @@ class CreateResponsesTable extends Migration
             $table->unsignedBigInteger('thread_id');
             $table->integer('response_number');
             $table->string('content');
-            $table->string('handle_name');
+            $table->string('handle_name')->nullable();
             $table->integer('reply_to')->nullable();
             $table->timestamps();
 
