@@ -31,6 +31,8 @@
                         text="{{ $thread->title }}">
                     </x-forum-list-item>
                 @endforeach
+
+                {{ $threads->links() }}
             @else
                 <p>スレッドが１件も無いよ</p>
             @endif
