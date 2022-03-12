@@ -9,7 +9,7 @@ class ThreadController extends Controller
 {
     public function index(Request $request)
     {
-        $threads = Thread::all();
+        $threads = Thread::paginate(5);
 
         return view('thread.index', ['threads' => $threads]);
     }
