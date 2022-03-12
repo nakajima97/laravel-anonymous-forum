@@ -39,4 +39,13 @@ class ThreadController extends Controller
 
         return redirect("/thread/show/${id}");
     }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+
+        $threads = Thread::where('title', 'LIKE', "%$keyword%")->paginate(20);
+
+        return view('thread.search', ['threads' => $threads]);
+    }
 }
