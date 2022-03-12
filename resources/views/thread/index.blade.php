@@ -14,14 +14,14 @@
         </div>
 
         <div class="my-5">
-            <div class="flex justify-center">
+            <form action="search" method="GET" class="flex justify-center">
                 {{-- <form action="get" class="flex justify-center"> --}}
-                <input type="text"
+                <input type="text" name="keyword"
                     class="grow shadow appearance-none border border-red-500 rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
                 <input type="submit" value="検索"
                     class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
                 {{-- </form> --}}
-            </div>
+            </form>
         </div>
 
         <div>

@@ -22,6 +22,8 @@ Route::get('/thread/create', [ThreadController::class, 'create']);
 Route::get('/thread/show/{id}', [ThreadController::class, 'show']);
 Route::post('/thread', [ThreadController::class, 'store']);
 
+Route::get('/search', [ThreadController::class, 'search']);
+
 Route::post('/response', [ResponseController::class, 'store'])
     ->name('response.store');
 
