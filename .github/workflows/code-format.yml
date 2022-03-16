@@ -77,5 +77,11 @@ jobs:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
           REDIS_PORT: ${{ job.services.redis.ports['6379'] }}
 
+      - name: Install PHP CS Fixer
+        run: |
+        cd ./tools
+        composer install --no-progress --prefer-dist --optimize-autoloader
+        cd ../
+
       - name: Run PHP CS Fixer
-        run: ls tools/php-cs-fixer/
+        # TODO: toolsの中身をcomposer installする
