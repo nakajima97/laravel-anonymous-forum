@@ -76,3 +76,6 @@ jobs:
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
           REDIS_PORT: ${{ job.services.redis.ports['6379'] }}
+
+      - name: Run PHP CS Fixer
+        run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
