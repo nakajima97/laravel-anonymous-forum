@@ -78,4 +78,4 @@ jobs:
           REDIS_PORT: ${{ job.services.redis.ports['6379'] }}
 
       - name: Run PHP CS Fixer
-        run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
+        run: ls
