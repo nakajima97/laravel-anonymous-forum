@@ -82,5 +82,5 @@ jobs:
           cd ./tools/php-cs-fixer
           composer install --no-progress --prefer-dist --optimize-autoloader
 
-      # - name: Run PHP CS Fixer
-      # TODO: toolsの中身をcomposer installする
+      - name: Run PHP CS Fixer
+        run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
