@@ -20,7 +20,7 @@ class Response extends Component
         $this->number = $number;
         $this->content = $content;
 
-        if (empty($name) || is_null($name)) {
+        if (empty($name)) {
             $name = "ななし";
         }
 
