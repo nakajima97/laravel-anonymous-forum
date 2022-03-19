@@ -84,3 +84,6 @@ jobs:
 
       - name: Run PHP CS Fixer
         run: tools/php-cs-fixer/vendor/bin/php-cs-fixer fix
+
+      - name: Run Larastan
+        run: ./vendor/bin/phpstan analyse
